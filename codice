@@ -1,7 +1,7 @@
 public static function inserisciObj($p) {
         $conn = Database::getConnectionPDO();
         $query = "INSERT INTO users (
-                    id,
+                   codice 2,
                     username,
                     password,
                     cognome,
