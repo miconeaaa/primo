@@ -1,0 +1,19 @@
+public static function inserisciObj($p) {
+        $conn = Database::getConnectionPDO();
+        $query = "INSERT INTO users (
+                    id,
+                    username,
+                    password,
+                    cognome,
+                    nome
+                    )
+                    VALUES (" .
+                $p->getID() . "," .
+                $p->getUsername() . "," .
+                $p->getpassword() . "," .
+                $p->getcognome() . "," . 
+                $p->getnome() . "," . 
+                $p->getprofilo() . ")";
+
+        return $conn->query($query);
+    }
