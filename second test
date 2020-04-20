@@ -1,6 +1,5 @@
 public static function modificaObj($p) {
-        $conn = Database::getConnectionaaa();
-
+        $conn = Database::getConnectionSQL();
         $id = $p->getID();
         $username = $p->getUsername();
         $password = $p->getpassword();
