@@ -8,7 +8,7 @@ public static function modificaObjUser($p) {
         $cognome = $p->getcognome();
         $profilo = $p->getProfilo();
 
-        $query = "UPDATE users SET 
+        $query = "UPDATE user SET 
                     username = '". $username."',
                     password ='". $password."',
                     cognome = '".$cognome."',
