@@ -1,0 +1,19 @@
+public static function modificaObjUser($p) {
+        $conn = Database::getConnectionPDO();
+
+        $id = $p->getID();
+        $username = $p->getUsername();
+        $password = $p->getpassword();
+        $nome = $p->getnome();
+        $cognome = $p->getcognome();
+        $profilo = $p->getProfilo();
+
+        $query = "UPDATE users SET 
+                    username = '". $username."',
+                    password ='". $password."',
+                    cognome = '".$cognome."',
+                    nome = '".$nome."',
+                    profilo = '".$profilo."'
+                    WHERE id = ".$id;
+        return $conn->query($query);
+    }
